@@ -1,0 +1,172 @@
+<style>
+/*KIỂU CHUNG CHO TOÀN BỘ CSS */
+body {
+    font-family: Arial, sans-serif; /* Đặt phông chữ cho toàn bộ trang */
+    margin: 0; /* Xóa lề mặc định */
+    padding: 0; /* Xóa đệm mặc định */
+}
+/*KIỂU CHO MENU*/
+#menu {
+    background-color: #fff; /* Đặt màu nền của menu thành trắng */
+    border-bottom: 1px solid #ccc; /* Thêm viền dưới cho menu */
+    display: flex; /* Sử dụng bố cục flexbox */
+    align-items: center; /* Căn giữa các mục theo chiều dọc */
+    justify-content: space-between; /* Phân phối không gian giữa các mục */
+    padding: 0 20px; /* Thêm đệm vào bên trái và phải */
+}
+#menu ul {
+    list-style-type: none; /* Loại bỏ các dấu đầu dòng từ danh sách */
+    margin: 0; /* Xóa lề mặc định */
+    padding: 0; /* Xóa đệm mặc định */
+    display: flex; /* Hiển thị các mục danh sách theo hàng ngang */
+}
+#menu li {
+    margin: 0 15px; /* Thêm khoảng cách ngang giữa các mục */
+}
+#menu a {
+    text-decoration: none; /* Loại bỏ gạch chân của liên kết */
+    color: #000; /* Đặt màu chữ của liên kết thành đen */
+    font-weight: bold; /* Đặt độ đậm của chữ */
+    padding: 15px 0; /* Thêm đệm trên và dưới  */
+    display: block; /* Đặt  khối  */
+}
+#menu a:hover {
+    color: #ff0000; /* Đổi màu chữ khi di chuột qua */
+}
+#menu img {
+    height: 40px; /* Đặt chiều cao cho hình ảnh logo */
+}
+/*CSS CHO TÌM KIEEMS*/
+.timkiem {
+    display: flex; /* Sử dụng bố cục flexbox cho phần tìm kiếm */
+    align-items: center; /* Căn giữa theo chiều dọc */
+}
+.timkiem input[type="text"] {
+    padding: 5px; /* Thêm đệm cho ô tìm kiếm */
+    font-size: 16px; /* Đặt kích thước chữ cho ô tìm kiếm */
+    border: 1px solid #ccc; /* Thêm viền cho ô tìm kiếm */
+    border-radius: 4px; /* Bo tròn góc của ô tìm kiếm */
+}
+.timkiem button {
+    padding: 5px 10px; /* Thêm đệm cho nút tìm kiếm */
+    margin-left: 5px; /* Thêm khoảng cách bên trái cho nút tìm kiếm */
+    background-color: #ebeaea; /* Đặt màu nền cho nút tìm kiếm */
+    color: #0c0c0c; /* Đặt màu chữ cho nút tìm kiếm */
+    border: none; /* Loại bỏ viền của nút */
+    border-radius: 4px; /* Bo tròn góc của nút */
+    cursor: pointer; /* Thay đổi con trỏ thành tay chỉ khi di chuột qua */
+}
+.timkiem button:hover {
+    background-color: #555; /* Đổi màu nền của nút khi di chuột qua */
+}
+/*KIỂU CHO TEXT BOX*/
+.textbox {
+    position: relative; /* Đặt vị trí tương đối để có thể dùng vị trí tuyệt đối bên trong */
+    text-align: center; /* Căn giữa nội dung theo chiều ngang */
+    color: white; /* Đặt màu chữ trắng */
+}
+.textbox img {
+    width: 100%; /* Đặt chiều rộng hình ảnh bằng 100% chiều rộng phần tử chứa */
+    height: auto; /* Đặt chiều cao tự động để duy trì tỷ lệ */
+}
+.textbox-text {
+    position: absolute; /* Đặt vị trí tuyệt đối để có thể đặt chính xác */
+    top: 50%; /* Căn giữa theo chiều dọc */
+    left: 50%; /* Căn giữa theo chiều ngang */
+    transform: translate(-50%, -50%); /* Dịch chuyển để căn giữa chính xác */
+}
+.textbox-text h1 {
+    font-size: 50px; /* Đặt kích thước chữ lớn cho tiêu đề */
+    margin: 0; /* Xóa lề mặc định */
+}
+.textbox-text p {
+    font-size: 20px; /* Đặt kích thước chữ cho đoạn văn */
+}
+.textbox-text button {
+    padding: 10px 20px; /* Thêm đệm cho nút */
+    background-color: #000; /* Đặt màu nền cho nút */
+    color: #fff; /* Đặt màu chữ trắng cho nút */
+    border: none; /* Loại bỏ viền của nút */
+    border-radius: 4px; /* Bo tròn góc của nút */
+    cursor: pointer; /* Thay đổi con trỏ thành tay chỉ khi di chuột qua */
+    margin-top: 20px; /* Thêm khoảng cách bên trên nút */
+    font-size: 16px; /* Đặt kích thước chữ cho nút */
+}
+.textbox-text button:hover {
+    background-color: #555; /* Đổi màu nền của nút khi di chuột qua */
+}
+/*KIỂU CHO VIDEO*/
+.video-container {
+    background-color: rgba(0, 0, 0, 0.5); /* Đặt màu nền với độ trong suốt */
+    padding: 10px; /* Thêm đệm cho phần tử video container */
+}
+.video-container video {
+    width: 100%; /* Đặt chiều rộng video bằng 100% chiều rộng phần tử chứa */
+    height: auto; /* Đặt chiều cao tự động để duy trì tỷ lệ */
+    object-fit: cover; /* Đặt video để phủ đầy phần tử chứa */
+}
+.video-overlay button {
+    padding: 10px 20px; /* Thêm đệm cho nút */
+    background-color: #000; /* Đặt màu nền cho nút */
+    color: #fff; /* Đặt màu chữ trắng cho nút */
+    border: none; /* Loại bỏ viền của nút */
+    border-radius: 4px; /* Bo tròn góc của nút */
+    cursor: pointer; /* Thay đổi con trỏ thành tay chỉ khi di chuột qua */
+    margin-top: 10px; /* Thêm khoảng cách bên trên nút */
+    font-size: 16px; /* Đặt kích thước chữ cho nút */
+}
+.video-overlay h1 {
+    font-size: 50px; /* Đặt kích thước chữ lớn cho tiêu đề */
+    margin: 0; /* Xóa lề mặc định */
+}
+.video-container {
+    position: relative; /* Đặt vị trí tương đối để có thể dùng vị trí tuyệt đối bên trong */
+    width: 100%; /* Đặt chiều rộng bằng 100% phần tử chứa */
+    max-width: 100%; /* Đặt chiều rộng tối đa bằng 100% phần tử chứa */
+}
+.video-overlay {
+    position: absolute; /* Đặt vị trí tuyệt đối để có thể đặt chính xác */
+    top: 0; /* Đặt vị trí trên cùng */
+    left: 0; /* Đặt vị trí bên trái */
+    width: 40%; /* Đặt chiều rộng của phần phủ */
+    height: 150%; /* Đặt chiều cao của phần phủ */
+    display: flex; /* Sử dụng bố cục flexbox */
+    justify-content: center; /* Căn giữa nội dung theo chiều ngang */
+    align-items: center; /* Căn giữa nội dung theo chiều dọc */
+    flex-direction: column; /* Sắp xếp các mục theo cột */
+    color: #fff; /* Đặt màu chữ trắng */
+}
+/*KIỂU CHO TRANG*/
+body {
+    font-family: 'Roboto', sans-serif; /* Đặt phông chữ Roboto cho toàn bộ trang */
+    margin: 0; /* Xóa lề mặc định */
+    padding: 0; /* Xóa đệm mặc định */
+    background-color: #f7f7f7; /* Đặt màu nền xám nhạt */
+}
+
+.container {
+    width: 90%; /* Đặt chiều rộng container bằng 90% chiều rộng trang */
+    margin: 0 auto; /* Căn giữa container */
+    padding-top: 20px; /* Thêm đệm trên cùng cho container */
+    display: flex; /* Sử dụng bố cục flexbox */
+    flex-wrap: wrap; /* Cho phép các mục bọc xuống hàng tiếp theo */
+    justify-content: space-between; /* Phân phối không gian giữa các mục */
+}
+
+h1 {
+    width: 100%; /* Đặt chiều rộng tiêu đề bằng 100% */
+    text-align: center; /* Căn giữa tiêu đề */
+    color: #333; /* Đặt màu chữ xám đậm */
+    font-weight: 700; /* Đặt độ đậm của chữ */
+}
+
+.card {
+    display: flex; /* Sử dụng bố cục flexbox */
+    flex-direction: column; /* Sắp xếp các mục theo cột */
+    width: 24%; /* Đặt chiều rộng thẻ bằng 24% */
+    margin: 20px 0; /* Thêm khoảng cách trên và dưới cho thẻ */
+    background-color: #fff; 
+}
+
+
+</style>
